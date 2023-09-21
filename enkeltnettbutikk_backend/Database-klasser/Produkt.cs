@@ -1,10 +1,11 @@
-﻿namespace enkeltnettbutikk_backend.Database_klasser
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace enkeltnettbutikk_backend.Database_klasser
 {
     public class Produkt
     {
+        [Key] // Bruk [Key] for å angi primærnøkkelen
         public int ProduktID { get; set; }
-        public int KategoriID { get; set; }
-        public string KategoriNavn { get; set; }
         public string Produktnavn { get; set; }
         public string Farge { get; set; }
         public string? Farge2 { get; set; }
@@ -19,7 +20,6 @@
 
         public Produkt()
         {
-            KategoriNavn = "";
             Produktnavn = "";
             Farge = "";
             Detaljefarger = "";

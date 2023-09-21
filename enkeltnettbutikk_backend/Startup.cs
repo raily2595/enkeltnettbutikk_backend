@@ -17,9 +17,21 @@ namespace EnkeltNettbutikkBackend
             services.AddDbContext<NettbutikkDbContext>(options =>
             {
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 27))); // Bruk din tilkoblingsstreng her
-            }); // Endre til din MySQL-tilkoblingsstreng
+            });
 
             services.AddControllers();
+
+            // Legg til CORS-tjenesten
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000") // Endre til din frontend-adresse
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
 
             // Legg til Swagger/OpenAPI-dokumentasjon
             services.AddSwaggerGen(c =>
@@ -33,6 +45,9 @@ namespace EnkeltNettbutikkBackend
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
+
+            // Aktiver CORS-policyen
+            app.UseCors("AllowSpecificOrigin");
 
             // Aktiver Swagger UI i utviklingsmodus
             if (app.ApplicationServices.GetRequiredService<IWebHostEnvironment>().IsDevelopment())

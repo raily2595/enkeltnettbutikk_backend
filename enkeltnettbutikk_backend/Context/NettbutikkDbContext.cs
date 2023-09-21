@@ -10,12 +10,11 @@ namespace enkeltnettbutikk_backend.Context
         }
 
         // Legg til DbSet-egenskaper for hver modell som skal kartlegges til en database tabell
-        public DbSet<Bestillingsdetalj> Bestillingsdetaljer { get; set; }
-        public DbSet<Bestillling> Bestillinger { get; set; }
-        public DbSet<Kategori> Kategorier { get; set; }
-        public DbSet<Kunde> Kunder {  get; set; }
-        public DbSet<Produkt> Produkter { get; set; }
-        public DbSet<Transaksjon> Transaksjoner { get; set;}
+        public DbSet<Bestillingsdetalj> Bestillingsdetalj { get; set; }
+        public DbSet<Bestillling> Bestilling { get; set; }
+        public DbSet<Kunde> Kunde {  get; set; }
+        public DbSet<Produkt> Produkt { get; set; }
+        public DbSet<Transaksjon> Transaksjon { get; set;}
         public DbSet<NettsideOrdre> NettsideOrdrer { get; set; }
     }
 }

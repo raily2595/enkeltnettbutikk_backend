@@ -24,7 +24,7 @@ namespace enkeltnettbutikk_backend.Controllers
         {
             if (orderRequest == null || orderRequest.Produkter == null || orderRequest.Produkter.Count == 0)
             {
-                return BadRequest("Invalid order data");
+                return BadRequest("Ugyldig ordre data");
             }
 
             // Opprett en ny ordre fra bestillingsforespørselen
@@ -37,20 +37,19 @@ namespace enkeltnettbutikk_backend.Controllers
                 Poststed = orderRequest.Poststed,
                 Telefon = orderRequest.Telefon,
                 Betalingsmetode = orderRequest.Betalingsmetode,
-                Betalingsstatus = orderRequest.Betalingsstatus,
+                Betalingsstatus = "",
                 OrdreDato = DateTime.Now,
                 Produkter = new List<Produkt>(),
                 Totalt = orderRequest.Totalt,
-                Bestillingsstatus = orderRequest.Bestillingsstatus
-            };
+                Bestillingsstatus = "motatt",
+        };
 
             foreach (var productRequest in orderRequest.Produkter)
             {
                 // Opprett produktobjekter og legg til i ordren
                 var product = new Produkt
                 {
-                    Produktnavn =  productRequest.Produktnavn,
-                    KategoriNavn = productRequest.KategoriNavn,
+                    Produktnavn =  productRequest.Produktnavn,              
                     Farge = productRequest.Farge,
                     Farge2 = productRequest.Farge2,
                     Lengde = productRequest.Lengde,
