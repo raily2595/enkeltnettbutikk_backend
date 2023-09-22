@@ -1,6 +1,4 @@
-﻿using enkeltnettbutikk_backend.Database_klasser;
-
-namespace enkeltnettbutikk_backend
+﻿namespace enkeltnettbutikk_backend
 {
     public class Bestillingsforespørsel
     {

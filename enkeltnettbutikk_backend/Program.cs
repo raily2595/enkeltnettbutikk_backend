@@ -1,6 +1,4 @@
 ﻿using EnkeltNettbutikkBackend;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
 
 namespace enkeltnettbutikk_backend
 {

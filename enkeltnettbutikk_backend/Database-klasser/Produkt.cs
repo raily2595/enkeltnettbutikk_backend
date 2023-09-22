@@ -4,25 +4,31 @@ namespace enkeltnettbutikk_backend.Database_klasser
 {
     public class Produkt
     {
-        [Key] // Bruk [Key] for å angi primærnøkkelen
-        public int ProduktID { get; set; }
-        public string Produktnavn { get; set; }
-        public string Farge { get; set; }
-        public string? Farge2 { get; set; }
-        public int Lengde { get; set; }
-        public int Bredde { get; set; }
-        public string Detaljefarger { get; set; }
-        public string? Klips { get; set; }
-        public string? Vinyltekst { get; set; }
-        public string? Fontfarge { get; set; }
-        public string? Font { get; set; }
-        public int Pris { get; set; }
+        private string produktID = "";
+        private string produktnavn = "";
+        private string farge = "";
+        private string? farge2;
+        private int lengde;
+        private int bredde;
+        private string detaljefarger = "";
+        private string? klips;
+        private string? vinyltekst;
+        private string? fontfarge;
+        private string? font;
+        private int pris;
 
-        public Produkt()
-        {
-            Produktnavn = "";
-            Farge = "";
-            Detaljefarger = "";
-        }
+        [Key] // Bruk [Key] for å angi primærnøkkelen
+        public string ProduktID { get => produktID; set => produktID = value; }
+        public string Produktnavn { get => produktnavn; set => produktnavn = value; }
+        public string Farge { get => farge; set => farge = value; }
+        public string? Farge2 { get => farge2; set => farge2 = value; }
+        public int Lengde { get => lengde; set => lengde = value; }
+        public int Bredde { get => bredde; set => bredde = value; }
+        public string Detaljefarger { get => detaljefarger; set => detaljefarger = value; }
+        public string? Klips { get => klips; set => klips = value; }
+        public string? Vinyltekst { get => vinyltekst; set => vinyltekst = value; }
+        public string? Fontfarge { get => fontfarge; set => fontfarge = value; }
+        public string? Font { get => font; set => font = value; }
+        public int Pris { get => pris; set => pris = value; }
     }
 }

@@ -4,22 +4,21 @@ namespace enkeltnettbutikk_backend.Database_klasser
 {
     public class Kunde
     {
-        [Key] // Bruk [Key] for å angi primærnøkkelen
-        public int KundeID { get; set; }
-        public string Navn { get; set; }
-        public string Epost { get; set; }
-        public string Adresse { get; set; }
-        public int Postnr { get; set; }
-        public string Poststed { get; set; }
-        public string Telefon { get; set; }
+        private string kundeID = "";
+        private string navn = "";
+        private string epost = "";
+        private string adresse = "";
+        private int postnr;
+        private string poststed = "";
+        private string telefon = "";
 
-        public Kunde() 
-        {
-            Navn = "";
-            Epost = "";
-            Adresse = "";
-            Poststed = "";
-            Telefon = "";
-        }
+        [Key] // Bruk [Key] for å angi primærnøkkelen
+        public string KundeID { get => kundeID; set => kundeID = value; }
+        public string Navn { get => navn; set => navn = value; }
+        public string Epost { get => epost; set => epost = value; }
+        public string Adresse { get => adresse; set => adresse = value; }
+        public int Postnr { get => postnr; set => postnr = value; }
+        public string Poststed { get => poststed; set => poststed = value; }
+        public string Telefon { get => telefon; set => telefon = value; }
     }
 }
