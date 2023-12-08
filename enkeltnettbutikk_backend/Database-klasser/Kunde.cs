@@ -8,7 +8,7 @@ namespace enkeltnettbutikk_backend.Database_klasser
         private string navn = "";
         private string epost = "";
         private string adresse = "";
-        private int postnr;
+        private string postnr = "";
         private string poststed = "";
         private string telefon = "";
 
@@ -17,7 +17,7 @@ namespace enkeltnettbutikk_backend.Database_klasser
         public string Navn { get => navn; set => navn = value; }
         public string Epost { get => epost; set => epost = value; }
         public string Adresse { get => adresse; set => adresse = value; }
-        public int Postnr { get => postnr; set => postnr = value; }
+        public string Postnr { get => postnr; set => postnr = value; }
         public string Poststed { get => poststed; set => poststed = value; }
         public string Telefon { get => telefon; set => telefon = value; }
     }

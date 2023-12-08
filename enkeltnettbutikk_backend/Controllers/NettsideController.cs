@@ -61,6 +61,8 @@ namespace enkeltnettbutikk_backend.Controllers
                     Fontfarge = productRequest.Fontfarge,
                     Font = productRequest.Font,
                     Pris = productRequest.Pris,
+                    Kommentar = productRequest.Kommentar,
+                    Valgtleke = productRequest.ValgtLeke,
                 };
                 _context.Produkt.Add(produkt);
                 await _context.SaveChangesAsync();

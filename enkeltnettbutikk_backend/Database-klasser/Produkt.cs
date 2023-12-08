@@ -16,6 +16,8 @@ namespace enkeltnettbutikk_backend.Database_klasser
         private string? fontfarge;
         private string? font;
         private int pris;
+        private string? kommentar;
+        private string? valgtleke;
 
         [Key] // Bruk [Key] for å angi primærnøkkelen
         public string ProduktID { get => produktID; set => produktID = value; }
@@ -30,5 +32,7 @@ namespace enkeltnettbutikk_backend.Database_klasser
         public string? Fontfarge { get => fontfarge; set => fontfarge = value; }
         public string? Font { get => font; set => font = value; }
         public int Pris { get => pris; set => pris = value; }
+        public string? Kommentar { get => kommentar; set => kommentar = value; }
+        public string? Valgtleke { get => valgtleke; set => valgtleke = value; }
     }
 }
